@@ -38,7 +38,7 @@ def load_data_to_mysql(transformed_data):
     """Load the transformed data into a MySQL database."""
     try:
         # Replace 'your_username', 'your_password', and 'your_database' with your MySQL credentials
-        engine = create_engine("mysql+pymysql://root:bugbutt5@localhost:3306/db")
+        engine = create_engine("mysql+pymysql://username:password@localhost:3306/db")
 
         # Load the data into the 'crypto_prices' table (replace table if it exists)
         transformed_data.to_sql("crypto_prices", engine, if_exists="replace", index=True)
